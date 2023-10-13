@@ -1,6 +1,7 @@
 package net.dimi.dimimod;
 
 import com.mojang.logging.LogUtils;
+import net.dimi.dimimod.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,6 +18,9 @@ public class DimiMod {
     private static final Logger LOGGER = LogUtils.getLogger();
     public DimiMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
+
 
         modEventBus.addListener(this::commonSetup);
 
