@@ -2,5 +2,11 @@
   "item.dimimod.zircon": "Zircon",
   "item.dimimod.raw_zircon": "Raw Zircon",
 
+  "block.dimimod.zircon_block": "Block of Zircon",
+  "block.dimimod.zircon_ore": "Zircon Ore",
+  "block.dimimod.deepslate_zircon_ore": "Deepslate Zircon Ore",
+  "block.dimimod.netherrack_zircon_ore": "Netherrack Zircon Ore",
+  "block.dimimod.endstone_zircon_ore": "Endstone Zircon Ore",
+
   "itemGroup.dimitab": "Zircon Dimi Tab"
 }
