@@ -1,6 +1,7 @@
 package net.dimi.dimimod.item;
 
 import net.dimi.dimimod.DimiMod;
+import net.dimi.dimimod.item.custom.EightBallItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -15,6 +16,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DIMI_TAB)));
         public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_zircon",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.DIMI_TAB)));
+        public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",
+            () -> new EightBallItem(new Item.Properties().tab(ModCreativeModeTab.DIMI_TAB).stacksTo(1)));
 
 
 
