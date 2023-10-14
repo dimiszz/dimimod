@@ -2,6 +2,7 @@ package net.dimi.dimimod.block;
 
 import net.dimi.dimimod.DimiMod;
 import net.dimi.dimimod.block.custom.JumpyBlock;
+import net.dimi.dimimod.block.custom.ZirconLampBlock;
 import net.dimi.dimimod.item.ModCreativeModeTab;
 import net.dimi.dimimod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -44,11 +45,13 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops(),
                     UniformInt.of(3, 7)), ModCreativeModeTab.DIMI_TAB);
-
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.DIMI_TAB);
-
+    public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f).requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0)), ModCreativeModeTab.DIMI_TAB);
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
