@@ -5,12 +5,15 @@ import net.dimi.dimimod.block.ModBlocks;
 import net.dimi.dimimod.item.ModItems;
 import net.dimi.dimimod.painting.ModPaintings;
 import net.dimi.dimimod.villager.ModVillagers;
+import net.dimi.dimimod.world.feature.ModConfiguredFeatures;
+import net.dimi.dimimod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -29,6 +32,9 @@ public class DimiMod {
 
         ModVillagers.register(modEventBus);
         ModPaintings.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
