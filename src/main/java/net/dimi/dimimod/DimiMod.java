@@ -3,6 +3,7 @@ package net.dimi.dimimod;
 import com.mojang.logging.LogUtils;
 import net.dimi.dimimod.block.ModBlocks;
 import net.dimi.dimimod.item.ModItems;
+import net.dimi.dimimod.painting.ModPaintings;
 import net.dimi.dimimod.villager.ModVillagers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -25,7 +26,9 @@ public class DimiMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
         ModVillagers.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
