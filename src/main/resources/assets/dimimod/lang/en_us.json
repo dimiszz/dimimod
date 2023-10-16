@@ -15,5 +15,6 @@
   "block.dimimod.zircon_lamp": "Zircon Lamp",
   "block.dimimod.blueberry_crop": "Blueberry Crop",
 
-  "itemGroup.dimitab": "Zircon Dimi Tab"
+  "itemGroup.dimitab": "Zircon Dimi Tab",
+  "entity.minecraft.villager.dimimod.jumpy_master": "Jump Master"
 }

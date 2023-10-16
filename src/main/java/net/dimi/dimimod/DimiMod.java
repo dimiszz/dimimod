@@ -3,6 +3,7 @@ package net.dimi.dimimod;
 import com.mojang.logging.LogUtils;
 import net.dimi.dimimod.block.ModBlocks;
 import net.dimi.dimimod.item.ModItems;
+import net.dimi.dimimod.villager.ModVillagers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,6 +25,7 @@ public class DimiMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -31,7 +33,9 @@ public class DimiMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
