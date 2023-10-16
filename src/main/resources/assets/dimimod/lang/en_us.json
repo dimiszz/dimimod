@@ -2,6 +2,8 @@
   "item.dimimod.zircon": "Zircon",
   "item.dimimod.raw_zircon": "Raw Zircon",
   "item.dimimod.eight_ball": "Eight Ball",
+  "item.dimimod.blueberry": "Blueberry",
+  "item.dimimod.blueberry_seeds": "Blueberry Seeds",
 
 
   "block.dimimod.zircon_block": "Block of Zircon",
@@ -11,6 +13,7 @@
   "block.dimimod.endstone_zircon_ore": "Endstone Zircon Ore",
   "block.dimimod.jumpy_block": "Jumpy Block",
   "block.dimimod.zircon_lamp": "Zircon Lamp",
+  "block.dimimod.blueberry_crop": "Blueberry Crop",
 
   "itemGroup.dimitab": "Zircon Dimi Tab"
 }
